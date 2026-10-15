@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 10 720 760" width="720" height="760" role="img" aria-label="Functional relationship diagram: the garden leads to the arrival space, which opens to the central feature island; the island connects to two display walls for distillates and infusions and to the service counter, which connects to storage behind the desk; the living wall is seen from the counter and the garden is seen through the windows from both displays">
+<!-- Author: R@y -->
+<svg xmlns="http://www.w3.org/2000/svg" data-author="R@y" viewBox="20 10 720 760" width="720" height="760" role="img" aria-label="Functional relationship diagram: the garden leads to the arrival space, which opens to the central feature island; the island connects to two display walls for distillates and infusions and to the service counter, which connects to storage behind the desk; the living wall is seen from the counter and the garden is seen through the windows from both displays">
 <line x1="380.0" y1="116.0" x2="380.0" y2="160.0" stroke="#1E2A21" stroke-width="2.5"></line>
 <line x1="380.0" y1="260.0" x2="380.0" y2="298.0" stroke="#1E2A21" stroke-width="2.5"></line>
 <line x1="318.6" y1="351.6" x2="221.4" y2="338.4" stroke="#1E2A21" stroke-width="2.5"></line>

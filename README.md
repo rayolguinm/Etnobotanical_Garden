@@ -1,39 +1,80 @@
-# GreenStore: Volunteer Architectural Design
+# GreenStore: Volunteer Architectural, Interior and Landscape Design
 
-**Author:** Raymundo "R@y" Olguin
+**Author:** R@y  
+**Location:** Puebla  
+**Revision:** R6 (2026-10-15)
 
-Project page for my volunteer social service as Architectural Designer for the outreach store of Jardín Etnobotánico Francisco Peláez R., Puebla, México (Jan to Jul 2022).
+Project page for my volunteer social service as Architectural Designer for the outreach store of the Francisco Peláez R. Ethnobotanical Garden, Puebla (Jan to Jul 2022). It presents the single-storey store, its modular fit-out, the enlarged entrance, the dimensioned drawings, the ethnobotanical forecourt garden and an inline viewer for the full drawing set.
 
-## Contents
+Live page: `https://rayolguinm.github.io/<repository-name>/`  
+Drawing set: [https://rayolguinm.github.io/greenstore-drawing-set/](https://rayolguinm.github.io/greenstore-drawing-set/)
+
+## Repository structure
 
 ```
-greenstore/
-├── index.html              the page (fonts load from Google Fonts)
-├── README.md
-└── images/
-    ├── hero.jpg            main interior render
-    ├── counter.jpg         counter and living wall render
-    ├── aerial.jpg          aerial cutaway render
-    ├── sections.jpg        before and after sections
-    ├── desk.jpg            modular desk renders
-    ├── plan-diagram.svg    concept floor plan
-    ├── zoning.svg          zoning and circulation diagram
-    ├── axon.svg            cutaway isometric
-    ├── section-diagram.svg light and green section
-    ├── long-section.svg    longitudinal section
-    ├── functional.svg      functional relationship diagram
-    ├── electrical.svg      concept lighting and power plan
-    └── irrigation.svg      concept irrigation and drainage plan
+<repository>/
+├── images/      2022 renders (JPG) and the generated drawings (SVG) used by the page
+├── README.md    this file
+└── index.html   the whole page; styles are inside the file, fonts load from Google Fonts
 ```
 
-## Publishing on GitHub Pages
+Three items, nothing else to set up. `index.html` only uses files in `images/` plus two links out: Google Fonts and the drawing-set site.
 
-1. Copy the whole `greenstore` folder into the root of the `rayolguinm.github.io` repository.
-2. Commit and push.
-3. The page will be live at `https://rayolguinm.github.io/greenstore/`.
+## What the page contains
 
-To link it from the portfolio, point the GreenStore project card to `greenstore/`.
+01 Context · 02 Design Principles · 03 Before and After (renders, layout, counter) · 04 Entrance · 05 Modular System · 06 Architectural Drawings · 07 Landscape Design · 08 Furniture Design · 09 Drawing Set (viewer for all 18 sheets, each linking to the full set) · 10 My Role · Purpose
 
-The drawings in `images/*.svg` are concept diagrams, not to scale and not construction documents.
+* **Entrance D01:** enlarged from about 0.70 m to a 2.10 x 2.40 m pair of 1.05 m leaves, 94.5 cm clear per leaf (accessible minimum 81.3 cm), 1.50 m turning circle inside.
+* **Modular system:** every dimension is a multiple of the 15 cm base module M; tile grid 30 cm (2M), fit-out grid 60 cm (4M: S-600 shelving, D-600 desk, I-600 island, LW-600 living-wall panels), landscape module 1.20 m (8M).
+* **Drawings:** setting-out axes and three levels of dimensions (elements, axis to axis, overall) on every orthographic drawing.
+* **Single storey:** the roof is an extensive green roof reached for maintenance only; there is no stair, roof deck or upper level.
+* **Landscape:** a 12.00 x 15.75 m forecourt on the building's axes with a 1.80 m axis walk, beds of maize, beans and squash, medicinal and aromatic herbs, dry-land plants and dye and ritual plants, a rain garden, a 1,100 L cistern fed by the roof and four native trees. 23 species, backed by peer-reviewed papers only.
 
-© Raymundo "R@y" Olguin
+## Units
+
+| Where | Unit | Example |
+|---|---|---|
+| Plans, sections, elevations (1:50, 1:100) and levels | m | 3.60, +3.00 |
+| Details (1:20) and schedules | cm | 105, 94.5, 60 x 60 cm |
+| Material thicknesses, glass, pipes, fixings | mm | 6 mm glass, Ø 100 mm pipe |
+| Base module | M = 15 cm | 2M 30 cm, 4M 60 cm, 8M 1.20 m |
+
+## Key dimensions
+
+| Item | Value |
+|---|---|
+| Interior | 3.60 x 5.70 m = 20.52 m² |
+| Axes | A to B 3.90 m; 1 to 2 2.10, 2 to 3 1.80, 3 to 4 2.10 m |
+| Walls / piers | 0.30 m brick; piers 0.30 x 0.45 m, corners 0.45 m |
+| Heights | ceiling +3.00, cove +2.70, pendant +2.40, slab top +3.15, parapet +3.60 |
+| D01 | 2.10 x 2.40 m, 2 leaves of 1.05 m |
+| Windows | W01 1.20 x 1.20 (x4), W02 0.90 x 1.20 (x2), sill +0.90; W03 1.80 x 0.45 clerestory at +2.40 |
+| Fit-out | 12 x S-600, 3 x D-600, 3 x I-600, 9 x LW-600, 4 x PL-450 |
+
+## Upload to GitHub
+
+1. On GitHub, open the repository (or create an empty **public** one with "Add a README" unticked).
+2. Click **Add file > Upload files**.
+3. Open this folder on your computer, select `images`, `README.md` and `index.html` together, and drag them onto the page. If the repository already has these files, the upload replaces them; the `images` folder merges, so delete any old image GitHub still lists that is not in this folder.
+4. Click **Commit changes**.
+5. **Settings > Pages > Build and deployment > Source: Deploy from a branch**, branch `main`, folder `/ (root)`, **Save**. The page goes live at `https://rayolguinm.github.io/<repository-name>/` after a minute or two.
+
+The links to the drawing set point to `https://rayolguinm.github.io/greenstore-drawing-set/`. If the drawing set lives in a repository with another name, search `index.html` for `greenstore-drawing-set` and replace it with that name.
+
+## How the files were made
+
+The SVG drawings, the drawing-set viewer and the landscape section are generated by a Python model of the project (modules, axes, openings, fit-out, planting) kept outside this repository, so the repository holds only what the page needs. Change a value there, rebuild, and upload the new `images/` and `index.html`.
+
+## Status and limits
+
+* Dimensions are design dimensions set to the module; the room was never surveyed for this set. Verify on site.
+* The 2022 renders show the original, narrower entrance and the client's logo. All drawings show D01.
+* Green-roof load on the existing slab must be confirmed by a licensed structural engineer; electrical and plumbing layouts are indicative.
+* Plan north is assumed.
+* Portfolio presentation, not issued for construction.
+
+## Sources
+
+The full numbered list of 25 peer-reviewed papers is in the Landscape section of the page and on sheet L-301 of the drawing set. Paper titles stay in their original language, as citations require.
+
+© R@y. All rights reserved.
