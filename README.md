@@ -40,6 +40,7 @@ Three items, nothing else to set up. `index.html` only uses files in `images/` p
 | `concept-layers.svg` | Exploded diagram: existing, repaired, added and living layers |
 | `passive-section.svg` | Schematic section of passive strategies |
 | `material-board.svg` | Nine-sample material board |
+| `concept-layers-m.svg`, `passive-section-m.svg`, `material-board-m.svg` | Phone versions of the three graphics above, with labels stacked below the drawing; the page swaps them in automatically below 640 px |
 | `plan-diagram.svg`, `module-plan.svg`, `zoning.svg` | A-101, A-102, A-103 plans |
 | `elevation-south.svg`, `elevation-west.svg` | A-201 elevations |
 | `section-diagram.svg`, `long-section.svg` | A-301 sections |
@@ -50,6 +51,10 @@ Three items, nothing else to set up. `index.html` only uses files in `images/` p
 | `electrical.svg`, `irrigation.svg` | E-101 and P-101 |
 | `landscape-plan.svg`, `planting-plan.svg`, `landscape-section.svg`, `landscape-details.svg` | L-101, L-102, L-301, L-501 |
 | `module-diagram.svg`, `functional.svg` | Module hierarchy and functional diagram |
+
+## Phone and tablet layout
+
+Tested in iPhone emulation at 320, 375 and 390 px wide, plus iPad mini and desktop, with an automatic check for horizontal overflow and overlapping text (none found). On phones: the section menu scrolls sideways in one line; data tables (restoration schedule, modules, plant schedule) turn into stacked cards; the drawing-set index becomes a row of sheet chips; the colour proportion bar stacks; and the three concept graphics switch to their tall phone versions. Tap any drawing to open it full size and pinch to zoom.
 
 ## Units
 
