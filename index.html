@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="R@y">
-<meta name="description" content="GreenStore: volunteer architectural, interior and landscape design for the outreach store of the Francisco Peláez R. Ethnobotanical Garden, Puebla. Modular drawing set with axes and three levels of dimensions. By R@y.">
-<!-- GreenStore volunteer service page | Author: R@y | 2022 project, drawing set revised 2026 -->
+<meta name="author" content="Raymundo &quot;R@y&quot; Olguin">
+<meta name="description" content="GreenStore: the restoration and adaptive reuse of an existing brick room as the outreach store of the Francisco Peláez R. Ethnobotanical Garden, Puebla. Architectural, interior and landscape design by Raymundo &quot;R@y&quot; Olguin.">
+<!-- GreenStore volunteer service page | Author: Raymundo "R@y" Olguin | 2022 project, drawing set revised 2026 -->
 <title>GreenStore | R@y</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet">
@@ -202,6 +202,51 @@ p { margin: 0; }
 .ds-fig figcaption { font-size: 14px; color: var(--ink-2); }
 .ds-fig figcaption span { color: var(--clay); letter-spacing: .1em; font-size: 12px; margin-left: 8px; }
 .ds-foot { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2) var(--s-3); }
+/* ---------- concept: keep / repair / reuse / add ---------- */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0; border-top: 1px solid var(--ink); }
+.step { padding: var(--s-4) var(--s-3) var(--s-4) 0; display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid var(--rule); }
+.step .k { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--clay); }
+.step .h3 { font-size: 30px; font-weight: 400; }
+.step .bar { height: 6px; width: 64px; background: var(--c); }
+.tag-pill { display: inline-block; padding: 2px 10px; border: 1px solid currentColor; border-radius: 999px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap; }
+.t-keep { color: #8C5A44; } .t-rep { color: var(--clay); } .t-add { color: #8A6A45; } .t-live { color: var(--leaf); }
+
+/* ---------- moodboard ---------- */
+.mood { display: grid; grid-auto-flow: dense; grid-template-columns: repeat(6, minmax(0, 1fr)); grid-auto-rows: clamp(90px, 11vw, 150px); gap: 10px; }
+.mood > * { position: relative; overflow: hidden; margin: 0; background: var(--paper-2); }
+.mood img { width: 100%; height: 100%; object-fit: cover; }
+.mood .lbl { position: absolute; left: 10px; bottom: 8px; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: #FFFFFF; text-shadow: 0 1px 6px rgba(0,0,0,.55); }
+.mood .lbl.dk { color: var(--ink); text-shadow: none; }
+.mood .word { display: flex; align-items: center; justify-content: center; text-align: center; padding: 12px; font-family: var(--f-display); font-style: italic; font-size: clamp(20px, 2.2vw, 32px); line-height: 1.15; }
+.m1 { grid-column: 1 / 4; grid-row: 1 / 4; } .m2 { grid-column: 4 / 6; grid-row: 1 / 3; } .m3 { grid-column: 6 / 7; grid-row: 1 / 2; }
+.m4 { grid-column: 6 / 7; grid-row: 2 / 3; } .m5 { grid-column: 4 / 7; grid-row: 3 / 4; } .m6 { grid-column: 1 / 3; grid-row: 4 / 6; }
+.m7 { grid-column: 3 / 4; grid-row: 4 / 6; } .m9 { grid-column: 4 / 7; grid-row: 4 / 6; } .m8 { grid-column: 1 / 4; grid-row: 6 / 7; } .m10 { grid-column: 4 / 7; grid-row: 6 / 7; }
+.mood .zoom img { transform: scale(var(--z, 1.8)); transform-origin: var(--o, 50% 90%); }
+.tx-brick { background: repeating-linear-gradient(0deg, #D9D0C2 0 3px, transparent 3px 22px), repeating-linear-gradient(90deg, #9C5B43 0 52px, #D9D0C2 52px 55px), #9C5B43; }
+.tx-terra { background: repeating-linear-gradient(0deg, #E7D9C6 0 3px, transparent 3px 46px), repeating-linear-gradient(90deg, #E7D9C6 0 3px, transparent 3px 46px), #C9825F; }
+.tx-weave { background: repeating-linear-gradient(45deg, #D9B77E 0 10px, #B8955E 10px 13px), repeating-linear-gradient(-45deg, rgba(184,149,94,.55) 0 10px, transparent 10px 20px); }
+.tx-lime { background: radial-gradient(circle at 30% 40%, #F7F3EA, #E6DFD0 70%); }
+.tx-leaf { background: radial-gradient(circle at 20% 30%, #A9C49A 0 14%, transparent 15%), radial-gradient(circle at 70% 60%, #6E8F5E 0 18%, transparent 19%), radial-gradient(circle at 45% 85%, #C9D8BE 0 12%, transparent 13%), radial-gradient(circle at 85% 15%, #A9C49A 0 10%, transparent 11%), #4F6B43;  background-size: 80px 80px;}
+.mood .night-w { background: var(--night); color: var(--night-ink); }
+@media (max-width: 720px) {
+  .mood { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 120px; }
+  .mood > * { grid-column: auto !important; grid-row: auto !important; }
+  .mood .m1, .mood .m9 { grid-column: span 2 !important; grid-row: span 2 !important; }
+  .mood .m5, .mood .m8 { grid-column: span 2 !important; }
+  .ratio { flex-direction: column; height: auto; }
+  .ratio span { flex: none !important; padding: 10px 12px; }
+}
+
+/* ---------- colour palette ---------- */
+.palette { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--rule-2); border: 1px solid var(--rule-2); }
+.pal { background: var(--paper); display: flex; flex-direction: column; }
+.pal i { display: block; height: 160px; background: var(--c); }
+.pal div { padding: 14px 16px 18px; display: flex; flex-direction: column; gap: 4px; }
+.pal b { font-weight: 500; }
+.pal code { font-family: var(--f-body); font-size: 13px; letter-spacing: .08em; color: var(--muted); }
+.ratio { display: flex; height: 44px; border: 1px solid var(--rule-2); }
+.ratio span { display: flex; align-items: center; padding-left: 12px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; overflow: hidden; white-space: nowrap; }
+
 @media (max-width: 820px) {
   .ds { grid-template-columns: 1fr; }
   .ds-index ol { max-height: none; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
@@ -220,6 +265,8 @@ p { margin: 0; }
 </a>
 <nav class="site-nav" aria-label="Sections">
 <a href="#context">Context</a>
+<a href="#concept">Concept</a>
+<a href="#interiors">Interiors</a>
 <a href="#entrance">Entrance</a>
 <a href="#modular">Modular</a>
 <a href="#drawings">Drawings</a>
@@ -233,9 +280,9 @@ p { margin: 0; }
 <section id="top" class="hero">
 <div class="stack lg">
 <p class="eyebrow">Volunteer Social Service · Jan to Jul 2022</p>
-<h1 class="h1">A small store that<br><em>grows with its garden.</em></h1>
+<h1 class="h1">Restore the room,<br><em>let the garden in.</em></h1>
 </div>
-<p>Architectural, interior and landscape design for the outreach store of the Francisco Peláez R. Ethnobotanical Garden in Puebla. A modular room of reclaimed wood, living plants and natural light, opening onto an ethnobotanical forecourt garden.</p>
+<p>Architectural, interior and landscape design for the outreach store of the Francisco Peláez R. Ethnobotanical Garden in Puebla. Instead of building something new, the project restores the brick room that was already there: same walls, same windows, same entrance doors, finished with lime, reclaimed timber and living plants, and opened onto an ethnobotanical forecourt garden.</p>
 </section>
 
 <section aria-label="Project overview">
@@ -244,9 +291,9 @@ p { margin: 0; }
 <div><dt>Client</dt><dd>Francisco Peláez R. Ethnobotanical Garden</dd></div>
 <div><dt>Role</dt><dd>Architectural Designer, volunteer</dd></div>
 <div><dt>Interior</dt><dd>20.52 m²</dd></div>
-<div><dt>Entrance</dt><dd>2.10 × 2.40 m pair</dd></div>
+<div><dt>Approach</dt><dd>Restoration and adaptive reuse</dd></div>
 <div><dt>Location</dt><dd>Puebla</dd></div>
-<div><dt>Status</dt><dd>Completed 2022 · set R3 2026</dd></div>
+<div><dt>Status</dt><dd>Completed 2022 · set R7 2026</dd></div>
 </dl>
 </section>
 </div>
@@ -258,21 +305,77 @@ p { margin: 0; }
 <h2 class="h2">A garden of more than 1,200 herbs and flowers needed a room to meet its visitors.</h2>
 <p class="body">The Ethnobotanical Garden cultivates plants from all over the world and shares Puebla's botanical and cultural heritage through environmental education. Its outreach store is where that mission meets the public: plants, seeds, natural products and bird food, sold in a space that should feel like an extension of the garden itself.</p>
 <p class="body">The brief asked for three things: make products easy to see, give staff a productive place to work, and do it all within the client's most critical constraint, a low budget.</p>
+<p class="body">The garden already owned a small single-storey brick building with a concrete roof slab, a pair of timber entrance doors and windows on both long sides. The first design decision was not to replace it. The building is sound, it belongs to the place, and everything it already holds (its bricks, its slab, its doors, its daylight) is material that does not have to be made, transported or thrown away again.</p>
 </div>
 </div>
 </section>
 
-<section id="principles" class="band">
+<section id="concept" class="band">
 <div class="wrap sec">
+<div class="sec-head side">
+<div class="label"><p class="num">02</p><p class="eyebrow">Design Concept</p></div>
+<div class="stack lg">
+<h2 class="h2">The most sustainable building is the one that is already standing.</h2>
+<p class="body">Life-cycle studies that compare keeping and refurbishing a building against demolishing it and building again find that refurbishment carries less embodied energy and lower environmental impacts<sup>[<a href="#c-1">C1</a>, <a href="#c-2">C2</a>]</sup>. GreenStore applies that idea at the scale of one small room. Every decision follows the same order: keep what is there, repair what is worn, reuse what can be salvaged, and add only what is missing, in a way that can be taken away again.</p>
+</div>
+</div>
+<div class="steps">
+<div class="step" style="--c:#8C5A44"><span class="bar"></span><span class="k">01 · Keep</span><h3 class="h3">The shell stays.</h3><p class="small">Brick walls, piers, concrete floor and roof slab, the window openings and the entrance all stay where they are. No demolition, no new foundations, no new openings cut into the walls.</p></div>
+<div class="step" style="--c:#A85A3A"><span class="bar"></span><span class="k">02 · Repair</span><h3 class="h3">Mend, don't replace.</h3><p class="small">The original timber doors are repaired and oil-finished in place. Window frames are eased and resealed, broken panes replaced with safety glass, brick joints repointed in lime.</p></div>
+<div class="step" style="--c:#D9BC92"><span class="bar"></span><span class="k">03 · Reuse</span><h3 class="h3">Second-life materials.</h3><p class="small">Shelving, island and counter are built from reclaimed pine. Sound bricks recovered during the repairs edge the garden beds; clean rubble becomes sub-base for the walk.</p></div>
+<div class="step" style="--c:#6E8F5E"><span class="bar"></span><span class="k">04 · Add, lightly</span><h3 class="h3">Only what is missing.</h3><p class="small">A planted roof, a living wall, lime finishes and a forecourt garden. Each addition is screwed, laid or planted, never cast in, so the room can always return to what it was.</p></div>
+</div>
+
+<figure class="fig mt-7">
+<div class="frame mid"><a href="images/concept-layers.svg" target="_blank" rel="noopener"><img src="images/concept-layers.svg" alt="Exploded diagram of the store separating what already existed from what was added: green roof added, existing roof slab kept, existing brick walls, piers, windows and entrance kept and repaired, reversible timber fit-out added, and terracotta tile laid over the existing floor slab"></a></div>
+<figcaption class="cap"><span class="tag">Diagram</span><span class="t">Existing and added</span><span class="d">Read from the bottom up: the building is the existing part; the new layers sit on it and lift off it.</span></figcaption>
+</figure>
+
+<div class="mt-7 stack lg">
+<p class="eyebrow">Restoration Schedule</p>
+<div class="table-wrap">
+<table class="table">
+<thead><tr><th>Element</th><th>Action</th><th>Design intent</th></tr></thead>
+<tbody>
+<tr><td>Brick walls and piers</td><td><span class="tag-pill t-keep">Keep</span></td><td>Clean, repoint in lime mortar, finish inside with breathable lime plaster so the old brick can still dry out.</td></tr>
+<tr><td>Floor slab</td><td><span class="tag-pill t-keep">Keep</span></td><td>Terracotta tile laid on the existing slab; no breaking out, no new concrete.</td></tr>
+<tr><td>Roof slab</td><td><span class="tag-pill t-keep">Keep</span></td><td>Base for an extensive green roof, subject to a structural check of the added load.</td></tr>
+<tr><td>Entrance doors D01</td><td><span class="tag-pill t-rep">Repair</span></td><td>Same opening, same pair of leaves: joints reglued, broken panes replaced with safety glass, worn hardware renewed, oil finish.</td></tr>
+<tr><td>Windows W01 to W03</td><td><span class="tag-pill t-rep">Repair</span></td><td>Openings unchanged; frames eased and resealed so they open again for cross ventilation.</td></tr>
+<tr><td>Salvaged brick and rubble</td><td><span class="tag-pill t-rep">Reuse</span></td><td>Sound bricks edge the planting beds; crushed rubble becomes sub-base under the garden walk.</td></tr>
+<tr><td>Shelving, island, counter</td><td><span class="tag-pill t-add">Add, reversible</span></td><td>Reclaimed pine on a 60 cm module, free-standing and screwed, so units can be moved, repaired or removed.</td></tr>
+<tr><td>Lighting and power</td><td><span class="tag-pill t-add">Add, reversible</span></td><td>Run in the timber cove and surface conduit; the brick is not chased.</td></tr>
+<tr><td>Green roof, living wall, garden</td><td><span class="tag-pill t-live">Living</span></td><td>Native and useful plants of Puebla, watered first from roof water.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<figure class="fig mt-7">
+<div class="frame mid"><a href="images/passive-section.svg" target="_blank" rel="noopener"><img src="images/passive-section.svg" alt="Schematic cross section of the restored store showing passive strategies: cross ventilation through the existing side windows and open-backed shelving, warm air leaving by the high window, thick brick walls as thermal mass, the green roof shading the slab, daylight from both sides, and roof water running to a cistern and a rain garden"></a></div>
+<figcaption class="cap"><span class="tag">Diagram</span><span class="t">Passive strategies</span><span class="d">The existing openings already do the work of ventilation and daylight; the design keeps them clear instead of adding machines.</span></figcaption>
+</figure>
+
+<div class="mt-5 stack">
+<p class="eyebrow">Concept Sources</p>
+<ol class="sources">
+<li id="c-1">Gaspar, P.L. and Santos, A.L. (2015). Embodied energy on refurbishment vs. demolition: a southern Europe case study. Energy and Buildings 87: 386-394. <a href="https://doi.org/10.1016/j.enbuild.2014.11.040" target="_blank" rel="noopener">doi.org/10.1016/j.enbuild.2014.11.040</a></li>
+<li id="c-2">Assefa, G. and Ambler, C. (2017). To demolish or not to demolish: life cycle consideration of repurposing buildings. Sustainable Cities and Society 28: 146-153. <a href="https://doi.org/10.1016/j.scs.2016.09.011" target="_blank" rel="noopener">doi.org/10.1016/j.scs.2016.09.011</a></li>
+</ol>
+</div>
+</div>
+</section>
+
+<section id="principles" class="wrap sec">
 <div class="sec-head">
-<div class="label"><p class="num">02</p><p class="eyebrow">Design Principles</p></div>
+<div class="label"><p class="num">03</p><p class="eyebrow">Design Principles</p></div>
 <p class="body">Three ideas guided every decision, from the floor plan to the joinery of the counter.</p>
 </div>
 <div class="card-grid">
 <article class="card">
 <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#4F6B43" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V11"></path><path d="M12 11c0-4 3-7 7-7 0 4-3 7-7 7z"></path><path d="M12 14c0-3-2.5-5.5-6-5.5 0 3.5 2.5 5.5 6 5.5z"></path></svg>
 <h3 class="h3 lg">Sustainability</h3>
-<p class="body">Reclaimed wood for shelving and furniture, a living wall behind the counter, a planted roof that sends its water to a cistern and a rain garden, and a forecourt planted with Puebla's own useful plants.</p>
+<p class="body">Reuse first: the existing building, its doors and windows are kept and repaired. What is added is reclaimed, local or living: reclaimed-pine furniture, lime and terracotta, a living wall, and a planted roof that sends its water to a cistern and a rain garden.</p>
 </article>
 <article class="card">
 <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#4F6B43" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"></path></svg>
@@ -282,20 +385,19 @@ p { margin: 0; }
 <article class="card">
 <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#4F6B43" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="8" height="8"></rect><rect x="13" y="3" width="8" height="8"></rect><rect x="3" y="13" width="8" height="8"></rect><rect x="13" y="13" width="8" height="8"></rect></svg>
 <h3 class="h3 lg">Minimalism</h3>
-<p class="body">Every dimension sits on a 15 cm module, every piece of furniture on a 60 cm grid, and one clear axis runs from the garden through the door to the counter. Nothing competes with the product.</p>
+<p class="body">Every dimension sits on a 15 cm module, every piece of furniture on a 60 cm grid, and one clear axis runs from the garden through the existing doorway to the counter. Nothing competes with the product.</p>
 </article>
-</div>
 </div>
 </section>
 
-<section id="transformation" class="wrap sec">
+<section id="transformation" class="wrap sec tight-top">
 <div class="sec-head">
-<div class="label"><p class="num">03</p><p class="eyebrow">Before and After</p></div>
-<h2 class="h2 sm">From a bare brick shell to a bright room with a garden on its roof.</h2>
+<div class="label"><p class="num">04</p><p class="eyebrow">Before and After</p></div>
+<h2 class="h2 sm">The same brick room, the same window openings, restored instead of replaced.</h2>
 </div>
 <figure class="fig">
-<img src="images/sections.jpg" alt="Before and after sections of the store: above, an empty brick room; below, the same room with white finished walls, wood shelving, woven pendant lamps, potted plants and a planted roof" style="width:100%;height:auto;background:#FFFFFF">
-<figcaption class="tiny">Building sections, 2022 renders. The existing brick room (top) and the proposed interior with finished walls, timber shelving and a green roof (bottom).</figcaption>
+<img src="images/sections.jpg" alt="Before and after sections of the store: above, an empty brick room; below, the same room with the same walls and window openings, now with white lime-finished walls, wood shelving, woven pendant lamps, potted plants and a planted roof" style="width:100%;height:auto;background:#FFFFFF">
+<figcaption class="tiny">Building sections, 2022 renders. Above, the existing brick room; below, the same shell restored. Walls, slab and window openings do not move; only finishes, furniture and plants are added.</figcaption>
 </figure>
 </section>
 
@@ -306,7 +408,7 @@ p { margin: 0; }
 <p class="eyebrow">The Layout</p>
 <h2 class="h2">One axis, from the doorway to the living wall.</h2>
 <ol class="list-num">
-<li><span class="n">i</span><span><strong>Entrance.</strong> A 2.10 m pair of doors on the axis: visitors step in and see the full room at once.</span></li>
+<li><span class="n">i</span><span><strong>Entrance.</strong> The original pair of doors, kept on the axis: visitors step in and see the full room at once.</span></li>
 <li><span class="n">ii</span><span><strong>Central island.</strong> Three 60 cm display modules with planters built into the end modules.</span></li>
 <li><span class="n">iii</span><span><strong>Perimeter shelving.</strong> Twelve open-backed S-600 units stand in front of the windows, so products sit in daylight.</span></li>
 <li><span class="n">iv</span><span><strong>Counter and living wall.</strong> Three desk modules and nine living-wall panels make the workplace the focal point.</span></li>
@@ -319,36 +421,82 @@ p { margin: 0; }
 <img class="full-img" src="images/counter.jpg" alt="Frontal render of the service counter in light timber with the garden's logo, set in front of a flowering living wall and flanked by windows and plant shelves">
 </section>
 
-<section id="entrance" class="wrap sec tight-top">
+<section id="interiors" class="band">
+<div class="wrap sec">
+<div class="sec-head side">
+<div class="label"><p class="num">05</p><p class="eyebrow">Interior Design</p></div>
+<div class="stack lg">
+<h2 class="h2">Warm, hand-made, daylit and alive.</h2>
+<p class="body">The interior palette starts from what the building already offers: the red of its brick, the light from its windows, the grain of its timber doors. Everything added is chosen to sit quietly beside those originals, so the room reads as one restored whole rather than a new shop fitted into an old box.</p>
+</div>
+</div>
+
+<p class="eyebrow">Moodboard</p>
+<div class="mood mt-5" role="img" aria-label="Moodboard: the restored interior, the living wall, existing brick, terracotta, woven fiber, reclaimed pine and garden greens, with the words repair, don't replace, and warm, hand-made, daylit, alive">
+<figure class="m1"><img src="images/hero.jpg" alt=""><span class="lbl">The restored room</span></figure>
+<figure class="m2"><img src="images/counter.jpg" alt="" style="object-position:50% 25%"><span class="lbl">Living wall</span></figure>
+<div class="m3 tx-brick"><span class="lbl">Existing brick</span></div>
+<div class="m4 tx-terra"><span class="lbl">Terracotta</span></div>
+<div class="m5 word night-w">Repair, don't replace.</div>
+<figure class="m6 zoom" style="--z:2.2;--o:50% 98%"><img src="images/aerial.jpg" alt=""><span class="lbl">Terracotta, from above</span></figure>
+<div class="m7 tx-weave"><span class="lbl dk">Woven fiber</span></div>
+<div class="m8 word tx-lime">warm · hand-made · daylit · alive</div>
+<figure class="m9 zoom" style="--z:2.7;--o:6% 56%"><img src="images/desk.jpg" alt=""><span class="lbl">Reclaimed pine</span></figure>
+<figure class="m10 zoom" style="--z:2.4;--o:2% 62%"><img src="images/hero.jpg" alt=""><span class="lbl">Garden inside</span></figure>
+</div>
+
+<div class="mt-7 stack lg">
+<p class="eyebrow">Colour Palette</p>
+<div class="palette">
+<div class="pal"><i style="--c:#EFEAE0"></i><div><b>Lime white</b><code>#EFEAE0</code><span class="tiny">Walls and ceiling. Reflects daylight deep into the room.</span></div></div>
+<div class="pal"><i style="--c:#C9825F"></i><div><b>Terracotta</b><code>#C9825F</code><span class="tiny">Floor. Local fired clay, warm underfoot.</span></div></div>
+<div class="pal"><i style="--c:#A7825C"></i><div><b>Reclaimed pine</b><code>#A7825C</code><span class="tiny">Shelving, island, counter.</span></div></div>
+<div class="pal"><i style="--c:#8C5A44"></i><div><b>Existing brick</b><code>#8C5A44</code><span class="tiny">The original shell, left legible outside.</span></div></div>
+<div class="pal"><i style="--c:#4F7A40"></i><div><b>Living green</b><code>#4F7A40</code><span class="tiny">Living wall, roof, garden.</span></div></div>
+<div class="pal"><i style="--c:#D9B77E"></i><div><b>Woven fiber</b><code>#D9B77E</code><span class="tiny">Pendant and baskets.</span></div></div>
+</div>
+<div class="ratio" aria-label="Colour proportions: 60 percent lime white, 30 percent earth tones, 10 percent green and fiber accents">
+<span style="flex:60;background:#EFEAE0;color:#1E2A21">60 · Lime white, the background</span>
+<span style="flex:30;background:linear-gradient(90deg,#C9825F,#A7825C 60%,#8C5A44);color:#FFFFFF">30 · Earth: clay, timber, brick</span>
+<span style="flex:10;background:#4F7A40;color:#FFFFFF">10 · Green</span>
+</div>
+<p class="small">A 60 / 30 / 10 balance keeps the light walls dominant so the room stays bright, lets the earth tones of the original materials carry warmth, and leaves green as the accent that comes from the plants and products themselves. A warm-white cove and the woven pendant keep that warmth after dark.</p>
+</div>
+
+<figure class="fig mt-7">
+<div class="frame"><a href="images/material-board.svg" target="_blank" rel="noopener"><img src="images/material-board.svg" alt="Material board of nine samples: existing brick, lime plaster, terracotta tile, reclaimed pine, the existing timber doors, woven palm fiber, basalt pavers, safety glass and stonecrop, each tagged as existing, reused, local or living"></a></div>
+<figcaption class="cap"><span class="tag">Board</span><span class="t">Materials</span><span class="d">Nine materials, each tagged by where it comes from: existing, reused, local or living.</span></figcaption>
+</figure>
+</div>
+</section>
+
+<section id="entrance" class="wrap sec">
 <div class="sec-head">
-<div class="label"><p class="num">04</p><p class="eyebrow">The Entrance</p></div>
-<h2 class="h2 sm">The door grew from about 0.70 m to a 2.10 m pair, so the room opens to the garden.</h2>
+<div class="label"><p class="num">06</p><p class="eyebrow">The Entrance</p></div>
+<h2 class="h2 sm">The original doors stay. They are repaired, not replaced.</h2>
 </div>
 <div class="split wide-left">
 <figure class="fig">
-<div class="frame"><a href="images/door-comparison.svg" target="_blank" rel="noopener"><img src="images/door-comparison.svg" alt="Entrance before and after at the same scale with axes A, B and CL and three levels of dimensions: the original pair of doors of about 0.70 m overall against the new pair of 1.05 m leaves, 2.10 m overall"></a></div>
-<figcaption class="cap"><span class="t">Before and after</span><span class="d">Same scale, axes A, B and CL, three dimension levels.</span></figcaption>
+<div class="frame"><a href="images/elevation-south.svg" target="_blank" rel="noopener"><img src="images/elevation-south.svg" alt="Entrance elevation at 1:50 with axes A, B and CL and three levels of dimensions: the existing 2.10 m by 2.40 m pair of glazed timber doors, retained and refinished, between two jamb piers, timber lintel, corner piers and parapet at +3.60 with the green roof planting above"></a></div>
+<figcaption class="cap"><span class="tag">A-201</span><span class="t">South elevation</span><span class="d">The existing pair of glazed timber leaves in its original opening. Details on sheet A-501.</span></figcaption>
 </figure>
 <div class="stack lg">
 <div class="ba">
-<div><p class="tiny">Before</p><p class="v">0.70 m</p><p class="small">two 0.35 m leaves</p></div>
-<div><p class="tiny">After, D01</p><p class="v new">2.10 m</p><p class="small">two 1.05 m leaves, 2.40 m high</p></div>
+<div><p class="tiny">Opening</p><p class="v">Unchanged</p><p class="small">same piers, same lintel</p></div>
+<div><p class="tiny">Doors D01</p><p class="v new">Repaired</p><p class="small">existing pair, 2.10 × 2.40 m</p></div>
 </div>
-<p class="body">The original pair of doors was narrower than a single accessible door. D01 gives 0.945 m of clear width through each leaf, above the 81.3 cm accessible minimum, opens outward over a flush threshold, and keeps a 1.50 m turning circle clear inside. The opening is 14 base modules wide and sits between two 0.30 m jamb piers, so the façade stays on the grid.</p>
-<p class="tiny">The 2022 renders above show the original entrance. Every drawing below shows D01.</p>
+<p class="body">The entrance is part of the building's character, and it already works: a pair of glazed timber leaves on the main axis, wide enough to open the room to the garden. So it stays exactly as it was. The leaves are taken down, their joints reglued, broken panes replaced with laminated safety glass, worn hinges and handles renewed, and the timber oiled, then hung back in the same frame.</p>
+<p class="body">Keeping the opening means no wall is cut, no lintel is replaced and no brick is wasted. With both leaves open the pair gives about 94.5 cm clear through each leaf, and a 1.50 m turning circle stays free just inside.</p>
+<p class="tiny">Dimensions are design dimensions set to the module; verify on site.</p>
 </div>
 </div>
-<figure class="fig mt-7">
-<div class="frame mid"><a href="images/elevation-south.svg" target="_blank" rel="noopener"><img src="images/elevation-south.svg" alt="Entrance elevation at 1:50 with axes A, B and CL and three levels of dimensions: the 2.10 m by 2.40 m pair of glazed reclaimed-timber doors between two jamb piers, timber lintel, corner piers and parapet at +3.60 with the green roof planting above"></a></div>
-<figcaption class="cap"><span class="tag">A-201</span><span class="t">South elevation</span><span class="d">Glazed reclaimed-timber leaves, timber kick panel and lintel. Details on sheet A-501.</span></figcaption>
-</figure>
 </section>
 
 <section id="modular" class="band">
 <div class="wrap sec">
 <div class="sec-head">
-<div class="label"><p class="num">05</p><p class="eyebrow">Modular System</p></div>
-<p class="body">One module family coordinates the building, the furniture and the garden, and one parameter file draws them all.</p>
+<div class="label"><p class="num">07</p><p class="eyebrow">Modular System</p></div>
+<p class="body">The module was read from the existing building, not imposed on it. The brick walls, piers, window and door openings and the room itself already fall on 15 cm steps, so the new furniture and the garden fit the old shell without cutting it.</p>
 </div>
 <div class="split">
 <figure class="fig">
@@ -359,7 +507,7 @@ p { margin: 0; }
 <table class="table">
 <thead><tr><th>Module</th><th>Size</th><th>Governs</th></tr></thead>
 <tbody>
-<tr><td>M</td><td>15 cm</td><td>Every dimension in the set, from walls to door to beds</td></tr>
+<tr><td>M</td><td>15 cm</td><td>Every dimension in the set, from the existing walls and doors to the new beds</td></tr>
 <tr><td>2M</td><td>30 cm</td><td>30 × 30 cm terracotta floor tile, wall thickness, shelf pitch</td></tr>
 <tr><td>4M</td><td>60 cm</td><td>S-600 shelving, D-600 desk, I-600 island, LW-600 living-wall panels</td></tr>
 <tr><td>8M</td><td>1.20 m</td><td>Garden paths, planting beds, walk banding</td></tr>
@@ -380,17 +528,17 @@ p { margin: 0; }
 
 <section id="drawings" class="wrap sec">
 <div class="sec-head">
-<div class="label"><p class="num">06</p><p class="eyebrow">Architectural Drawings</p></div>
+<div class="label"><p class="num">08</p><p class="eyebrow">Architectural Drawings</p></div>
 <p class="body">Every orthographic drawing carries setting-out axes and three levels of dimensions: openings and elements, axis to axis, and overall. Select any drawing to open it full size.</p>
 </div>
 
 <div class="grid-auto" style="--min:320px">
 <figure class="fig">
-<div class="frame"><a href="images/plan-diagram.svg" target="_blank" rel="noopener"><img src="images/plan-diagram.svg" alt="Dimensioned floor plan at 1:50 with axes A, B and 1 to 4: 2.10 m double entrance on the main axis, central island, modular shelving in front of the side windows, counter and living wall, three levels of dimensions on every side"></a></div>
+<div class="frame"><a href="images/plan-diagram.svg" target="_blank" rel="noopener"><img src="images/plan-diagram.svg" alt="Dimensioned floor plan at 1:50 with axes A, B and 1 to 4: the existing 2.10 m double entrance, retained, on the main axis, central island, modular shelving in front of the side windows, counter and living wall, three levels of dimensions on every side"></a></div>
 <figcaption class="stack">
 <p class="cap"><span class="tag">A-101</span><span class="t">Floor plan</span></p>
 <ol class="keys">
-<li><span class="n">D01</span>Entrance, 2.10 m</li>
+<li><span class="n">D01</span>Existing entrance, retained</li>
 <li><span class="n">I-600</span>Feature island</li>
 <li><span class="n">S-600</span>Shelving units</li>
 <li><span class="n">D-600</span>Service counter</li>
@@ -408,7 +556,7 @@ p { margin: 0; }
 </div>
 
 <figure class="fig mt-7">
-<div class="frame mid"><a href="images/axon.svg" target="_blank" rel="noopener"><img src="images/axon.svg" alt="Cutaway isometric generated from the parametric model: roof slab and green roof lifted, the 2.10 m entrance with both leaves open, modular shelving, island, counter and living wall, with ground axes and three levels of dimensions"></a></div>
+<div class="frame mid"><a href="images/axon.svg" target="_blank" rel="noopener"><img src="images/axon.svg" alt="Cutaway isometric: roof slab and green roof lifted, the existing 2.10 m entrance with both leaves open, modular shelving, island, counter and living wall, with ground axes and three levels of dimensions"></a></div>
 <figcaption class="cap"><span class="tag">A-901</span><span class="t">Cutaway isometric</span><span class="d">The roof is lifted to show the planted layer, the room and its modules; axes and dimension strings run on the ground.</span></figcaption>
 </figure>
 
@@ -419,7 +567,7 @@ p { margin: 0; }
 
 <figure class="fig mt-7">
 <div class="frame mid"><a href="images/long-section.svg" target="_blank" rel="noopener"><img src="images/long-section.svg" alt="Longitudinal section B-B on the main axis with axes 1 to 4 and three levels of dimensions: entrance door open outward, island, counter, living wall below the high window, shelving beyond and figures for scale"></a></div>
-<figcaption class="cap"><span class="tag">A-301</span><span class="t">Section B-B</span><span class="d">Cut along the main axis, from the 2.40 m high entrance to the living wall, with figures for scale.</span></figcaption>
+<figcaption class="cap"><span class="tag">A-301</span><span class="t">Section B-B</span><span class="d">Cut along the main axis, from the existing entrance to the living wall, with figures for scale.</span></figcaption>
 </figure>
 
 <div class="grid-auto mt-7" style="--min:360px">
@@ -436,8 +584,8 @@ p { margin: 0; }
 <figcaption class="cap"><span class="tag">A-401</span><span class="t">Shelving wall</span></figcaption>
 </figure>
 <figure class="fig">
-<div class="frame"><a href="images/door-window-details.svg" target="_blank" rel="noopener"><img src="images/door-window-details.svg" alt="Door and window details at 1:20 with axes and three levels of dimensions: D01 in elevation and plan, and windows W01, W02 and W03"></a></div>
-<figcaption class="cap"><span class="tag">A-501</span><span class="t">Door and windows</span></figcaption>
+<div class="frame"><a href="images/door-window-details.svg" target="_blank" rel="noopener"><img src="images/door-window-details.svg" alt="Door and window details at 1:20 with axes and three levels of dimensions: the existing D01 in elevation and plan, and the existing windows W01, W02 and W03"></a></div>
+<figcaption class="cap"><span class="tag">A-501</span><span class="t">Existing door and windows</span><span class="d">Repair details for the retained openings.</span></figcaption>
 </figure>
 </div>
 
@@ -455,7 +603,7 @@ p { margin: 0; }
 
 <div class="mt-7 stack lg">
 <p class="eyebrow">Building Systems</p>
-<p class="body">Lighting, power, irrigation and drainage on the same axes and module, ready for the engineers who will size them.</p>
+<p class="body">Lighting, power, irrigation and drainage on the same axes and module, ready for the engineers who will size them. Cables run in the timber cove and surface conduit, so the existing brick is never chased.</p>
 <div class="grid-auto" style="--min:320px">
 <figure class="fig">
 <div class="frame"><a href="images/electrical.svg" target="_blank" rel="noopener"><img src="images/electrical.svg" alt="Lighting and power plan with axes and three levels of dimensions: perimeter LED cove, four downlights on the 600 grid, pendant over the island, three accent spots on the living wall, outlets, switches and panel"></a></div>
@@ -468,28 +616,17 @@ p { margin: 0; }
 </div>
 </div>
 
-<div class="mt-7 stack lg">
-<p class="eyebrow">Material Palette</p>
-<div class="swatches">
-<div class="swatch"><i style="--c:#C9825F"></i><b>Terracotta tile</b><span class="tiny">Floor, 30 × 30 cm</span></div>
-<div class="swatch"><i style="--c:#A7825C"></i><b>Reclaimed wood</b><span class="tiny">Shelving, desk, doors</span></div>
-<div class="swatch"><i style="--c:#EFEAE0"></i><b>Lime plaster</b><span class="tiny">Walls and ceiling</span></div>
-<div class="swatch"><i style="--c:#4F7A40"></i><b>Living green</b><span class="tiny">Living wall and roof</span></div>
-<div class="swatch"><i style="--c:#D9B77E"></i><b>Woven fiber</b><span class="tiny">Pendant and baskets</span></div>
-<div class="swatch"><i style="--c:#5B5B57"></i><b>Basalt pavers</b><span class="tiny">Garden paths</span></div>
-</div>
-</div>
 </section>
 
-<!--LANDSCAPE:START (generated by tools/build.py from tools/greenstore/landscape.py; edit there) -->
 <section id="landscape" class="wrap sec">
 <div class="sec-head">
-<div class="label"><p class="num">07</p><p class="eyebrow">Landscape Design</p></div>
+<div class="label"><p class="num">09</p><p class="eyebrow">Landscape Design</p></div>
 <h2 class="h2 sm">The store's axis walks out into a forecourt planted with the useful plants of Puebla.</h2>
 </div>
 <div class="split">
 <div class="stack lg">
-<p class="body">The garden around the store is laid out on the building's own axes and modules. The main axis runs out of the 2.10 m door as a 1.80 m walk; paths and beds are 1.20 m multiples; the plaza paving keeps the 60 cm fit-out grid. The forecourt band is 12.00 by 15.75 m.</p>
+<p class="body">The garden around the store is laid out on the building's own axes and modules. The main axis runs out of the existing doorway as a 1.80 m walk; paths and beds are 1.20 m multiples; the plaza paving keeps the 60 cm fit-out grid. The forecourt band is 12.00 by 15.75 m.</p>
+<p class="body">The landscape follows the same rule as the building: work with the ground that is there. The existing soil is kept and improved rather than removed, cut and fill stay on site, and the beds are rain-fed so that, once established, they live on the seasons and on the roof water.</p>
 <p class="body">Puebla sits at about 2,140 m with a temperate subhumid climate: summer rains, about six humid months, 400 to 800 mm a year, a small temperature range and occasional winter frost<sup>[<a href="#src-1">1</a>, <a href="#src-2">2</a>]</sup>. The palette leans on rain-fed annuals for the wet season and drought-tolerant perennials for the dry one, and the roof water stays on site.</p>
 </div>
 <div class="ba">
@@ -503,6 +640,16 @@ p { margin: 0; }
 <div class="frame mid"><a href="images/landscape-plan.svg" target="_blank" rel="noopener"><img src="images/landscape-plan.svg" alt="Landscape site plan at 1:100 with building and landscape axes and three levels of dimensions: the store axis continued as a 1.80 m walk, entry plaza, maize and medicinal beds in front, dry and dye gardens along the sides, rain garden behind, cistern and four native trees"></a></div>
 <figcaption class="cap"><span class="tag">L-101</span><span class="t">Site plan</span><span class="d">Landscape axes W1, E1, F1, F2 and R1 extend the building's grid into the garden.</span></figcaption>
 </figure>
+<div class="mt-7 stack lg">
+<p class="eyebrow">Landscape Strategy</p>
+<h3 class="h2 sm">A garden that reuses its ground, its water and its own plants.</h3>
+<div class="steps">
+<div class="step" style="--c:#8B6A4E"><span class="bar"></span><span class="k">Ground</span><h3 class="h3">Keep the soil.</h3><p class="small">Existing topsoil is kept, loosened and fed with the garden's own compost. Levels are balanced on site, so no soil is trucked in or out.</p></div>
+<div class="step" style="--c:#A85A3A"><span class="bar"></span><span class="k">Materials</span><h3 class="h3">Salvage first.</h3><p class="small">Bricks recovered from the repairs edge the beds; crushed rubble is the sub-base of the walk. Basalt pavers are laid on sand, not concrete, so they can be lifted and the rain soaks through.</p></div>
+<div class="step" style="--c:#3F7FA8"><span class="bar"></span><span class="k">Water</span><h3 class="h3">Every drop stays.</h3><p class="small">The green roof slows the rain, the downspouts fill a 1,100 L cistern for the living wall, and the overflow sinks into the rain garden instead of the street.</p></div>
+<div class="step" style="--c:#6E8F5E"><span class="bar"></span><span class="k">Plants</span><h3 class="h3">From the garden itself.</h3><p class="small">Useful native plants of Puebla, propagated where possible from the Ethnobotanical Garden's own collection, rain-fed annuals for the wet season and drought-tolerant perennials for the dry one.</p></div>
+</div>
+</div>
 <div class="grid-auto mt-7" style="--min:220px;--gap:32px 40px"><div><h3 class="h3">Maize, beans and squash</h3><p class="tiny">Bed MI · 12.2 m²</p><p class="small">The three-crop plot that anchors the diet of the Puebla countryside, with the wild greens that grow among it: amaranth greens, Aztec broccoli and Bolivian coriander. The three crops root at different depths, so together they draw more from the soil.<sup>[<a href="#src-12">12</a>, <a href="#src-13">13</a>, <a href="#src-10">10</a>]</sup></p></div><div><h3 class="h3">Medicinal and aromatic</h3><p class="tiny">Bed ME · 12.2 m²</p><p class="small">Sweet-scented marigold and giant hyssop for teas, wormseed and oregano lippia for the kitchen, and Aztec marigold for the Day of the Dead. Each bed carries a label the store can extend into its products.<sup>[<a href="#src-14">14</a>, <a href="#src-15">15</a>, <a href="#src-16">16</a>, <a href="#src-17">17</a>]</sup></p></div><div><h3 class="h3">Dry garden, Tehuacán Valley</h3><p class="tiny">Bed XE · 27.9 m²</p><p class="small">The Tehuacán-Cuicatlán Valley in Puebla&#x27;s arid south has 1,608 recorded useful plant species. Agaves, sour pitaya and bilberry cacti and the endemic slender ponytail palm fill the hot west side.<sup>[<a href="#src-3">3</a>, <a href="#src-4">4</a>, <a href="#src-6">6</a>, <a href="#src-7">7</a>, <a href="#src-8">8</a>]</sup></p></div><div><h3 class="h3">Dye and ritual</h3><p class="tiny">Bed TI · 27.9 m²</p><p class="small">Anil indigo for blue, prickly pear hosting the cochineal insect for red, and marigold for orange: the colours of the region&#x27;s textiles, grown beside the store that sells natural products.<sup>[<a href="#src-22">22</a>, <a href="#src-23">23</a>, <a href="#src-24">24</a>, <a href="#src-17">17</a>]</sup></p></div><div><h3 class="h3">Rain garden</h3><p class="tiny">Bed RG · 14.4 m²</p><p class="small">Behind the store, a planted basin takes the roof water. The rear downspouts fill a 1,100 L cistern first, which supplies the living-wall drip line, and the overflow soaks in here.<sup>[<a href="#src-25">25</a>]</sup></p></div></div>
 <figure class="fig mt-7">
 <div class="frame mid"><a href="images/planting-plan.svg" target="_blank" rel="noopener"><img src="images/planting-plan.svg" alt="Planting plan at 1:100 with axes and three levels of dimensions: every bed divided into planting drifts keyed to the plant schedule"></a></div>
@@ -527,15 +674,14 @@ p { margin: 0; }
 <ol class="sources"><li id="src-1" value="1">Lauer, W. and Stiehl, E. (1973). Hygrothermische Klimatypen im Raum Puebla-Tlaxcala (Mexiko) [Hygrothermal climate types in the Puebla-Tlaxcala region, Mexico]. Erdkunde 27(3): 230-234. <a href="https://doi.org/10.3112/erdkunde.1973.03.06" target="_blank" rel="noopener">doi.org/10.3112/erdkunde.1973.03.06</a></li><li id="src-2" value="2">Tejeda-Martínez, A., Méndez-Pérez, I.R., Báez-Vásquez, J.P., et al. (2025). Intensities of the 2023 and 2024 heatwaves in different local climate zones of the city of Puebla (Mexico). Atmósfera 39: 673-697. <a href="https://doi.org/10.20937/ATM.53476" target="_blank" rel="noopener">doi.org/10.20937/ATM.53476</a></li><li id="src-3" value="3">Blancas, J., Casas, A., Rangel-Landa, S., et al. (2010). Plant management in the Tehuacán-Cuicatlán Valley, Mexico. Economic Botany 64(4): 287-302. <a href="https://doi.org/10.1007/s12231-010-9133-0" target="_blank" rel="noopener">doi.org/10.1007/s12231-010-9133-0</a></li><li id="src-4" value="4">Delgado-Lemus, A., Torres, I., Blancas, J. and Casas, A. (2014). Vulnerability and risk management of Agave species in the Tehuacán Valley, México. Journal of Ethnobiology and Ethnomedicine 10: 53. <a href="https://doi.org/10.1186/1746-4269-10-53" target="_blank" rel="noopener">doi.org/10.1186/1746-4269-10-53</a></li><li id="src-5" value="5">Delgado-Lemus, A., Casas, A. and Téllez, O. (2014). Distribution, abundance and traditional management of Agave potatorum in the Tehuacán Valley, Mexico. Journal of Ethnobiology and Ethnomedicine 10: 63. <a href="https://doi.org/10.1186/1746-4269-10-63" target="_blank" rel="noopener">doi.org/10.1186/1746-4269-10-63</a></li><li id="src-6" value="6">Pérez-Negrón, E., Dávila, P. and Casas, A. (2014). Use of columnar cacti in the Tehuacán Valley, Mexico. Journal of Ethnobiology and Ethnomedicine 10: 79. <a href="https://doi.org/10.1186/1746-4269-10-79" target="_blank" rel="noopener">doi.org/10.1186/1746-4269-10-79</a></li><li id="src-7" value="7">Casas, A., Pickersgill, B., Caballero, J. and Valiente-Banuet, A. (1997). Ethnobotany and domestication in xoconochtli, Stenocereus stellatus (Cactaceae), in the Tehuacán Valley and La Mixteca Baja, México. Economic Botany 51(3): 279-292. <a href="https://doi.org/10.1007/BF02862097" target="_blank" rel="noopener">doi.org/10.1007/BF02862097</a></li><li id="src-8" value="8">Cardel, Y., Rico-Gray, V., García-Franco, J.G. and Thien, L.B. (1997). Ecological status of Beaucarnea gracilis, an endemic species of the semiarid Tehuacán Valley, México. Conservation Biology 11(2): 367-374. <a href="https://doi.org/10.1046/j.1523-1739.1997.95322.x" target="_blank" rel="noopener">doi.org/10.1046/j.1523-1739.1997.95322.x</a></li><li id="src-9" value="9">Larios, C., Casas, A., Vallejo, M., Moreno-Calles, A.I. and Blancas, J. (2013). Plant management and biodiversity conservation in Náhuatl homegardens of the Tehuacán Valley, Mexico. Journal of Ethnobiology and Ethnomedicine 9: 74. <a href="https://doi.org/10.1186/1746-4269-9-74" target="_blank" rel="noopener">doi.org/10.1186/1746-4269-9-74</a></li><li id="src-10" value="10">Basurto-Peña, F., Martínez-Alfaro, M.A. and Villalobos-Contreras, G. (1998). Los quelites de la Sierra Norte de Puebla, México: inventario y formas de preparación [The wild greens of the Sierra Norte de Puebla, Mexico: inventory and ways of preparation]. Boletín de la Sociedad Botánica de México 62: 49-62. <a href="https://doi.org/10.17129/botsci.1550" target="_blank" rel="noopener">doi.org/10.17129/botsci.1550</a></li><li id="src-11" value="11">Carrillo-Ocampo, A. and Engleman, E.M. (1994). Anatomía de la semilla de Chenopodium berlandieri ssp. nuttalliae (Chenopodiaceae), huauzontle [Seed anatomy of Chenopodium berlandieri ssp. nuttalliae]. Boletín de la Sociedad Botánica de México 54: 17-35. <a href="https://doi.org/10.17129/botsci.1426" target="_blank" rel="noopener">doi.org/10.17129/botsci.1426</a></li><li id="src-12" value="12">Postma, J.A. and Lynch, J.P. (2012). Complementarity in root architecture for nutrient uptake in ancient maize/bean and maize/bean/squash polycultures. Annals of Botany 110(2): 521-534. <a href="https://doi.org/10.1093/aob/mcs082" target="_blank" rel="noopener">doi.org/10.1093/aob/mcs082</a></li><li id="src-13" value="13">Sosa Cabrera, E. and González Amaro, R. (2021). Representaciones sociales de la milpa en tres regiones de Puebla [Social representations of the maize-bean-squash plot in three regions of Puebla]. Textual 78: 187-211. <a href="https://doi.org/10.5154/r.textual.2021.78.08" target="_blank" rel="noopener">doi.org/10.5154/r.textual.2021.78.08</a></li><li id="src-14" value="14">Pérez-Ortega, G., González-Trujano, M.E., Ángeles-López, G.E., Brindis, F., Vibrans, H. and Reyes-Chilpa, R. (2016). Tagetes lucida Cav.: ethnobotany, phytochemistry and pharmacology of its tranquilizing properties. Journal of Ethnopharmacology 181: 221-228. <a href="https://doi.org/10.1016/j.jep.2016.01.040" target="_blank" rel="noopener">doi.org/10.1016/j.jep.2016.01.040</a></li><li id="src-15" value="15">Palma-Tenango, M., Sánchez-Fernández, R.E. and Soto-Hernández, M. (2021). A systematic approach to Agastache mexicana research. Molecules 26(12): 3751. <a href="https://doi.org/10.3390/molecules26123751" target="_blank" rel="noopener">doi.org/10.3390/molecules26123751</a></li><li id="src-16" value="16">Ramírez-López, X., Ramírez-Herrera, C., Velasco-García, M.V. and Cetina-Alcalá, V.M. (2023). Population structure and spatial distribution of oregano (Lippia graveolens) at the Tehuacán-Cuicatlán Biosphere Reserve. Revista Chapingo Serie Ciencias Forestales y del Ambiente 28(2): 289-303. <a href="https://doi.org/10.5154/r.rchscfa.2021.04.024" target="_blank" rel="noopener">doi.org/10.5154/r.rchscfa.2021.04.024</a></li><li id="src-17" value="17">Serrato Cruz, M.A., et al. (2008). Carotenoides y características morfológicas en cabezuelas de muestras mexicanas de Tagetes erecta [Carotenoids and morphological traits in flower heads of Mexican samples of Tagetes erecta]. Revista Fitotecnia Mexicana 31(3): 67-72. <a href="https://www.redalyc.org/pdf/610/61009713.pdf" target="_blank" rel="noopener">www.redalyc.org/pdf/610/61009713.pdf</a></li><li id="src-18" value="18">García-Mateos, R., Soto-Hernández, M. and Vibrans, H. (2001). Erythrina americana Miller (colorín), a versatile resource from Mexico: a review. Economic Botany 55(3): 391-400. <a href="https://doi.org/10.1007/BF02866562" target="_blank" rel="noopener">doi.org/10.1007/BF02866562</a></li><li id="src-19" value="19">Guzmán, F.A., Segura-Ledesma, S. and Almaguer-Vargas, G. (2020). El capulín (Prunus serotina): árbol multipropósito con potencial forestal en México [Capulin (Prunus serotina): a multipurpose tree with forestry potential in Mexico]. Madera y Bosques 26(1). <a href="https://doi.org/10.21829/myb.2020.2611866" target="_blank" rel="noopener">doi.org/10.21829/myb.2020.2611866</a></li><li id="src-20" value="20">García-Mateos, R., Ibarra-Estrada, E. and Nieto-Ángel, R. (2013). Antioxidant compounds in hawthorn fruits (Crataegus spp.) of Mexico. Revista Mexicana de Biodiversidad 84(4): 1298-1304. <a href="https://doi.org/10.7550/rmb.35675" target="_blank" rel="noopener">doi.org/10.7550/rmb.35675</a></li><li id="src-21" value="21">Collazo-Ortega, M., Rosas, U. and Reyes-Santiago, J. (2017). Towards providing solutions to the air quality crisis in the Mexico City Metropolitan Area: carbon sequestration by succulent species in green roofs. PLoS Currents Disasters. <a href="https://doi.org/10.1371/currents.dis.bb66ae4f4f3c6eb118a019a29a9ce80f" target="_blank" rel="noopener">doi.org/10.1371/currents.dis.bb66ae4f4f3c6eb118a019a29a9ce80f</a></li><li id="src-22" value="22">Campana, M.G., Robles García, N.M. and Tuross, N. (2015). America&#x27;s red gold: multiple lineages of cultivated cochineal in Mexico. Ecology and Evolution. <a href="https://doi.org/10.1002/ece3.1398" target="_blank" rel="noopener">doi.org/10.1002/ece3.1398</a></li><li id="src-23" value="23">Tovar, A., Pando-Moreno, M. and Garza, C. (2005). Evaluation of three varieties of Opuntia ficus-indica as hosts of the cochineal insect Dactylopius coccus. Economic Botany 59(1): 3-7. <a href="https://doi.org/10.1663/0013-0001(2005)059[0003:EOTVOO]2.0.CO;2" target="_blank" rel="noopener">doi.org/10.1663/0013-0001(2005)059[0003:EOTVOO]2.0.CO;2</a></li><li id="src-24" value="24">Schikorr, F., Duno de Stefano, R. and Cetzal-Ix, W. (2019). El género Indigofera en la Península de Yucatán: plantas de valor tintóreo [The genus Indigofera in the Yucatan Peninsula: dye plants]. Acta Botánica Mexicana 126: e1366. <a href="https://doi.org/10.21829/abm126.2019.1366" target="_blank" rel="noopener">doi.org/10.21829/abm126.2019.1366</a></li><li id="src-25" value="25">Nolan, N. and Lartigue, C. (2017). Evaluation of the performance of rainwater harvesting systems for domestic use in Tlalpan, Mexico City. Civil Engineering Journal 3(3): 137-151. <a href="https://doi.org/10.28991/cej-2017-00000080" target="_blank" rel="noopener">doi.org/10.28991/cej-2017-00000080</a></li></ol>
 </div>
 </section>
-<!--LANDSCAPE:END-->
 
 <section id="furniture" class="band night">
 <div class="wrap sec">
 <div class="sec-head side">
-<div class="label"><p class="num">08</p><p class="eyebrow">Furniture Design</p></div>
+<div class="label"><p class="num">10</p><p class="eyebrow">Furniture Design</p></div>
 <div class="stack lg">
 <h2 class="h2">A modular desk that sells on one side and works on the other.</h2>
-<p class="body">The front face displays jars, bottles and seed packets in open cubbies. The back holds a computer station and storage boxes for stock. Three identical D-600 modules, built from simple timber panels, can be assembled, repaired or extended without specialist labor.</p>
+<p class="body">The front face displays jars, bottles and seed packets in open cubbies. The back holds a computer station and storage boxes for stock. Three identical D-600 modules, built from reclaimed timber panels and screwed rather than glued, can be assembled, repaired, extended or taken apart without specialist labor. None of it is fixed to the old walls.</p>
 </div>
 </div>
 <img src="images/desk.jpg" alt="Two renders of the modular timber desk: the customer side with display shelves and the staff side with a computer, cubbies and storage boxes" style="width:100%;height:auto;border-radius:2px">
@@ -545,11 +691,10 @@ p { margin: 0; }
 </div>
 </section>
 
-<!--DRAWINGSET:START (generated by tools/build.py from tools/greenstore/cdset.py; edit there) -->
 <section id="drawingset" class="band">
 <div class="wrap sec">
 <div class="sec-head">
-<div class="label"><p class="num">09</p><p class="eyebrow">Drawing Set</p></div>
+<div class="label"><p class="num">11</p><p class="eyebrow">Drawing Set</p></div>
 <p class="body">18 sheets in the construction-document format, from the cover and renders to the planting schedule and the water plan. Pick a sheet to see it here, or open the full set with title blocks and schedules.</p>
 </div>
 <div class="ds">
@@ -557,17 +702,17 @@ p { margin: 0; }
 <div class="ds-view" aria-live="polite">
 <div class="ds-head">
 <p class="ds-big" id="ds-no">G-000</p>
-<div class="stack"><p class="h3" id="ds-title">Cover and sheet index</p><p class="tiny"><span id="ds-scale">Scale NTS</span> · Rev R6 · R@y</p></div>
+<div class="stack"><p class="h3" id="ds-title">Cover and sheet index</p><p class="tiny"><span id="ds-scale">Scale NTS</span> · Rev R7 · Raymundo "R@y" Olguin</p></div>
 <div class="ds-nav"><button type="button" class="ds-btn" id="ds-prev" aria-label="Previous sheet">&larr;</button><button type="button" class="ds-btn" id="ds-next" aria-label="Next sheet">&rarr;</button></div>
 </div>
-<div class="ds-figs" id="ds-figs"><figure class="ds-fig"><a href="images/hero.jpg" target="_blank" rel="noopener"><img src="images/hero.jpg" alt="2022 concept render, original entrance"></a><figcaption>2022 concept render, original entrance <span>NTS</span></figcaption></figure></div>
+<div class="ds-figs" id="ds-figs"><figure class="ds-fig"><a href="images/hero.jpg" target="_blank" rel="noopener"><img src="images/hero.jpg" alt="2022 concept render"></a><figcaption>2022 concept render <span>NTS</span></figcaption></figure></div>
 <div class="ds-foot"><a class="btn" id="ds-open" href="https://rayolguinm.github.io/greenstore-drawing-set/#G-000">Open this sheet in the full set</a><span class="tiny">Title blocks, notes and schedules live in the full set.</span></div>
 </div>
 </div>
 </div>
 <script>
 (function(){
-  var D=[{"no": "G-000", "title": "Cover and sheet index", "scale": "NTS", "imgs": [{"f": "images/hero.jpg", "c": "2022 concept render, original entrance", "s": "NTS"}]}, {"no": "G-001", "title": "General notes and modular coordination", "scale": "1:50", "imgs": [{"f": "images/module-diagram.svg", "c": "Modular hierarchy", "s": "1:50"}, {"f": "images/door-comparison.svg", "c": "Entrance before and after", "s": "1:50"}]}, {"no": "G-002", "title": "Visual presentation: concept renders", "scale": "NTS", "imgs": [{"f": "images/counter.jpg", "c": "Counter and living wall", "s": "NTS"}, {"f": "images/aerial.jpg", "c": "Aerial cutaway", "s": "NTS"}, {"f": "images/sections.jpg", "c": "Before and after", "s": "NTS"}, {"f": "images/desk.jpg", "c": "Modular desk", "s": "NTS"}]}, {"no": "L-101", "title": "Landscape site plan", "scale": "1:100", "imgs": [{"f": "images/landscape-plan.svg", "c": "Site plan", "s": "1:100"}]}, {"no": "L-102", "title": "Planting plan and plant schedule", "scale": "1:100", "imgs": [{"f": "images/planting-plan.svg", "c": "Planting plan", "s": "1:100"}]}, {"no": "L-301", "title": "Landscape section", "scale": "1:100", "imgs": [{"f": "images/landscape-section.svg", "c": "Section S-S on the store axis", "s": "1:100"}]}, {"no": "L-501", "title": "Landscape details", "scale": "1:20", "imgs": [{"f": "images/landscape-details.svg", "c": "Walk, rain garden, green roof", "s": "1:20"}]}, {"no": "A-101", "title": "Floor plan", "scale": "1:50", "imgs": [{"f": "images/plan-diagram.svg", "c": "Floor plan", "s": "1:50"}]}, {"no": "A-102", "title": "Modular coordination plan", "scale": "1:50", "imgs": [{"f": "images/module-plan.svg", "c": "Modular coordination plan", "s": "1:50"}]}, {"no": "A-103", "title": "Zoning and circulation", "scale": "1:50", "imgs": [{"f": "images/zoning.svg", "c": "Zoning and circulation", "s": "1:50"}]}, {"no": "A-201", "title": "Exterior elevations", "scale": "1:50", "imgs": [{"f": "images/elevation-south.svg", "c": "South (entrance) elevation", "s": "1:50"}, {"f": "images/elevation-west.svg", "c": "West elevation", "s": "1:50"}]}, {"no": "A-301", "title": "Building sections", "scale": "1:50", "imgs": [{"f": "images/section-diagram.svg", "c": "Section A-A", "s": "1:50"}, {"f": "images/long-section.svg", "c": "Section B-B", "s": "1:50"}]}, {"no": "A-401", "title": "Interior elevations", "scale": "1:50", "imgs": [{"f": "images/interior-north.svg", "c": "Interior elevation 1, north wall", "s": "1:50"}, {"f": "images/interior-west.svg", "c": "Interior elevation 2, west wall", "s": "1:50"}]}, {"no": "A-501", "title": "Door and window details", "scale": "1:20", "imgs": [{"f": "images/door-window-details.svg", "c": "D01 and windows", "s": "1:20"}]}, {"no": "A-601", "title": "Modular fit-out details", "scale": "1:20", "imgs": [{"f": "images/furniture-modules.svg", "c": "S-600, D-600, I-600, LW-600", "s": "1:20"}]}, {"no": "A-901", "title": "Cutaway isometric", "scale": "NTS", "imgs": [{"f": "images/axon.svg", "c": "Cutaway isometric", "s": "NTS"}]}, {"no": "E-101", "title": "Lighting and power", "scale": "1:50", "imgs": [{"f": "images/electrical.svg", "c": "Lighting and power plan", "s": "1:50"}]}, {"no": "P-101", "title": "Irrigation, drainage and rainwater", "scale": "1:50", "imgs": [{"f": "images/irrigation.svg", "c": "Irrigation, drainage and rainwater plan", "s": "1:50"}]}], i=0;
+  var D=[{"no": "G-000", "title": "Cover and sheet index", "scale": "NTS", "imgs": [{"f": "images/hero.jpg", "c": "2022 concept render", "s": "NTS"}]}, {"no": "G-001", "title": "General notes and modular coordination", "scale": "1:50", "imgs": [{"f": "images/module-diagram.svg", "c": "Modular hierarchy", "s": "1:50"}, {"f": "images/concept-layers.svg", "c": "Existing and added layers", "s": "NTS"}]}, {"no": "G-002", "title": "Visual presentation: concept renders", "scale": "NTS", "imgs": [{"f": "images/counter.jpg", "c": "Counter and living wall", "s": "NTS"}, {"f": "images/aerial.jpg", "c": "Aerial cutaway", "s": "NTS"}, {"f": "images/sections.jpg", "c": "Before and after", "s": "NTS"}, {"f": "images/desk.jpg", "c": "Modular desk", "s": "NTS"}, {"f": "images/material-board.svg", "c": "Material board", "s": "NTS"}]}, {"no": "L-101", "title": "Landscape site plan", "scale": "1:100", "imgs": [{"f": "images/landscape-plan.svg", "c": "Site plan", "s": "1:100"}]}, {"no": "L-102", "title": "Planting plan and plant schedule", "scale": "1:100", "imgs": [{"f": "images/planting-plan.svg", "c": "Planting plan", "s": "1:100"}]}, {"no": "L-301", "title": "Landscape section", "scale": "1:100", "imgs": [{"f": "images/landscape-section.svg", "c": "Section S-S on the store axis", "s": "1:100"}]}, {"no": "L-501", "title": "Landscape details", "scale": "1:20", "imgs": [{"f": "images/landscape-details.svg", "c": "Walk, rain garden, green roof", "s": "1:20"}]}, {"no": "A-101", "title": "Floor plan", "scale": "1:50", "imgs": [{"f": "images/plan-diagram.svg", "c": "Floor plan", "s": "1:50"}]}, {"no": "A-102", "title": "Modular coordination plan", "scale": "1:50", "imgs": [{"f": "images/module-plan.svg", "c": "Modular coordination plan", "s": "1:50"}]}, {"no": "A-103", "title": "Zoning and circulation", "scale": "1:50", "imgs": [{"f": "images/zoning.svg", "c": "Zoning and circulation", "s": "1:50"}]}, {"no": "A-201", "title": "Exterior elevations", "scale": "1:50", "imgs": [{"f": "images/elevation-south.svg", "c": "South (entrance) elevation", "s": "1:50"}, {"f": "images/elevation-west.svg", "c": "West elevation", "s": "1:50"}]}, {"no": "A-301", "title": "Building sections", "scale": "1:50", "imgs": [{"f": "images/section-diagram.svg", "c": "Section A-A", "s": "1:50"}, {"f": "images/long-section.svg", "c": "Section B-B", "s": "1:50"}]}, {"no": "A-401", "title": "Interior elevations", "scale": "1:50", "imgs": [{"f": "images/interior-north.svg", "c": "Interior elevation 1, north wall", "s": "1:50"}, {"f": "images/interior-west.svg", "c": "Interior elevation 2, west wall", "s": "1:50"}]}, {"no": "A-501", "title": "Door and window details", "scale": "1:20", "imgs": [{"f": "images/door-window-details.svg", "c": "Existing D01 and windows, repair details", "s": "1:20"}]}, {"no": "A-601", "title": "Modular fit-out details", "scale": "1:20", "imgs": [{"f": "images/furniture-modules.svg", "c": "S-600, D-600, I-600, LW-600", "s": "1:20"}]}, {"no": "A-901", "title": "Cutaway isometric", "scale": "NTS", "imgs": [{"f": "images/axon.svg", "c": "Cutaway isometric", "s": "NTS"}]}, {"no": "E-101", "title": "Lighting and power", "scale": "1:50", "imgs": [{"f": "images/electrical.svg", "c": "Lighting and power plan", "s": "1:50"}]}, {"no": "P-101", "title": "Irrigation, drainage and rainwater", "scale": "1:50", "imgs": [{"f": "images/irrigation.svg", "c": "Irrigation, drainage and rainwater plan", "s": "1:50"}]}], i=0;
   var no=document.getElementById('ds-no'), ti=document.getElementById('ds-title'), sc=document.getElementById('ds-scale'),
       figs=document.getElementById('ds-figs'), open=document.getElementById('ds-open'), items=document.querySelectorAll('.ds-item');
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
@@ -583,20 +728,20 @@ p { margin: 0; }
 })();
 </script>
 </section>
-<!--DRAWINGSET:END-->
 
 <section id="role" class="wrap sec">
 <div class="sec-head">
-<div class="label"><p class="num">10</p><p class="eyebrow">My Role</p></div>
+<div class="label"><p class="num">12</p><p class="eyebrow">My Role</p></div>
 <p class="body">Seven months of voluntary service, January to July 2022, working with a multidisciplinary team. Drawing set revised in 2026.</p>
 </div>
 <div class="grid-auto role" style="--min:260px;--gap:48px">
+<div><h3 class="h3">Restoration Strategy</h3><p class="body">Defined the keep, repair, reuse and add approach: what of the existing building stays, what is mended, and the few light additions it needed.</p></div>
 <div><h3 class="h3">Documentation</h3><p class="body">Developed architectural plans, 3D models and renderings in Revit, translating design concepts into construction documentation.</p></div>
 <div><h3 class="h3">Interiors and Furniture</h3><p class="body">Designed the interior layout and custom modular furniture to support product displays and the visitor experience.</p></div>
 <div><h3 class="h3">Planning and Budget</h3><p class="body">Collaborated on project planning, cost estimates and budget analysis, aligning the design with the garden's needs and resources.</p></div>
 </div>
 <div class="tools mt-7">
-<span class="tag">Tools</span><span>Revit</span><span>3ds Max</span><span>V-Ray 5</span><span>Photoshop</span><span>InDesign</span><span>Python (parametric drawing set)</span>
+<span class="tag">Tools</span><span>Revit</span><span>3ds Max</span><span>V-Ray 5</span><span>Photoshop</span><span>InDesign</span>
 </div>
 </section>
 
@@ -604,14 +749,14 @@ p { margin: 0; }
 <div class="wrap">
 <div class="quote">
 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4F6B43" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 5-14 14-14 0 9-6 14-14 14z"></path><path d="M5 19l8-8"></path></svg>
-<p>My purpose was to give back to the community by applying my architectural and design skills to a space that shares Puebla's botanical and cultural heritage.</p>
-<span class="eyebrow">R@y</span>
+<p>My purpose was to give back to the community by giving an existing building a second life, as a space that shares Puebla's botanical and cultural heritage.</p>
+<span class="eyebrow">Raymundo "R@y" Olguin</span>
 </div>
 </div>
 </section>
 
 <footer class="wrap site-foot">
-<span>Designed by R@y · Volunteer Architectural Designer, 2022 · Drawing set R3, 2026</span>
+<span>Designed by Raymundo "R@y" Olguin · Volunteer Architectural Designer, 2022 · Drawing set R7, 2026</span>
 <a href="https://rayolguinm.github.io">rayolguinm.github.io</a>
 </footer>
 
